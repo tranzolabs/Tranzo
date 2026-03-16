@@ -96,10 +96,11 @@
     }
 
     .topbar.scrolled {
-      background: rgba(5,5,7,0.7);
-      backdrop-filter: blur(40px) saturate(1.2);
-      -webkit-backdrop-filter: blur(40px) saturate(1.2);
+      background: rgba(5,5,7,0.6);
+      backdrop-filter: blur(60px) saturate(1.4);
+      -webkit-backdrop-filter: blur(60px) saturate(1.4);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
     }
 
     .topbar-inner {
@@ -109,6 +110,7 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
+      gap: 12px;
     }
 
     .logo {
@@ -166,6 +168,8 @@
       cursor: pointer;
       border: none;
       transition: all 0.3s var(--ease);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .topbar-cta:hover {
@@ -201,8 +205,10 @@
       padding: 6px 14px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: var(--frost);
-      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(24px) saturate(1.2);
+      -webkit-backdrop-filter: blur(24px) saturate(1.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
       font-size: 11px;
       color: var(--text-dim);
       width: fit-content;
@@ -322,16 +328,18 @@
     .frost-card {
       border-radius: 20px;
       border: 1px solid var(--border);
-      background: var(--frost);
-      backdrop-filter: blur(30px) saturate(1.1);
-      -webkit-backdrop-filter: blur(30px) saturate(1.1);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(40px) saturate(1.3);
+      -webkit-backdrop-filter: blur(40px) saturate(1.3);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.3);
       padding: 32px;
-      transition: border-color 0.4s ease, background 0.4s ease;
+      transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
     }
 
     .frost-card:hover {
       border-color: var(--border-hover);
-      background: var(--frost-hover);
+      background: rgba(255,255,255,0.05);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.4);
     }
 
     /* ── Sections ── */
@@ -370,8 +378,10 @@
     .wallet-preview {
       border-radius: 24px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.02);
-      backdrop-filter: blur(40px);
+      background: rgba(255,255,255,0.025);
+      backdrop-filter: blur(60px) saturate(1.4);
+      -webkit-backdrop-filter: blur(60px) saturate(1.4);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 16px 64px rgba(0,0,0,0.4);
       padding: 2px;
       margin-top: 64px;
     }
@@ -379,7 +389,9 @@
     .wallet-inner {
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.04);
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 28px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -451,7 +463,10 @@
     .wallet-right {
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: var(--frost);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(30px) saturate(1.2);
+      -webkit-backdrop-filter: blur(30px) saturate(1.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -505,17 +520,20 @@
     }
 
     .product-cell {
-      background: var(--bg);
+      background: rgba(5,5,7,0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 36px 28px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      transition: background 0.4s ease;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
       cursor: default;
     }
 
     .product-cell:hover {
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.03);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
     .product-num {
@@ -561,8 +579,10 @@
       padding: 28px 20px;
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: var(--frost);
-      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.025);
+      backdrop-filter: blur(40px) saturate(1.3);
+      -webkit-backdrop-filter: blur(40px) saturate(1.3);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 4px 24px rgba(0,0,0,0.2);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -572,6 +592,8 @@
     .flow-step:hover {
       border-color: var(--border-hover);
       transform: translateY(-3px);
+      background: rgba(255,255,255,0.04);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.3);
     }
 
     .flow-num {
@@ -611,8 +633,10 @@
     .sdk-card {
       border-radius: 20px;
       border: 1px solid var(--border);
-      background: var(--frost);
-      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.025);
+      backdrop-filter: blur(40px) saturate(1.3);
+      -webkit-backdrop-filter: blur(40px) saturate(1.3);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.25);
       padding: 32px;
       display: flex;
       flex-direction: column;
@@ -622,6 +646,8 @@
 
     .sdk-card:hover {
       border-color: var(--border-hover);
+      background: rgba(255,255,255,0.04);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 12px 40px rgba(0,0,0,0.35);
     }
 
     .sdk-title {
@@ -640,7 +666,10 @@
     .code-block {
       border-radius: 12px;
       border: 1px solid var(--border);
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
       padding: 18px 20px;
       font-family: 'SF Mono', 'Fira Code', monospace;
       font-size: 12px;
@@ -784,26 +813,108 @@
     @media (max-width: 960px) {
       .topbar-links { display: none; }
       .menu-toggle { display: block; }
+      .topbar-cta { padding: 7px 16px; font-size: 11px; }
       .hero-heading { font-size: clamp(2.4rem, 6vw, 3.6rem); }
       .wallet-inner { grid-template-columns: 1fr; }
       .products-grid { grid-template-columns: repeat(2, 1fr); }
       .flow { grid-template-columns: repeat(2, 1fr); }
       .sdk-grid { grid-template-columns: 1fr; }
       .hero-metrics { gap: 32px; flex-wrap: wrap; }
+      .hero-sub { font-size: 15px; }
+      .section-heading { font-size: clamp(1.6rem, 4vw, 2.2rem); }
     }
 
     @media (max-width: 640px) {
-      .container { padding: 0 18px; }
-      .topbar { padding: 0 18px; }
-      .hero { padding: 120px 0 60px; }
-      .hero-heading { font-size: 2rem; }
-      .section { padding: 80px 0; }
-      .products-grid { grid-template-columns: 1fr; }
-      .flow { grid-template-columns: 1fr; }
-      .hero-metrics { gap: 24px; }
-      .wallet-inner { padding: 18px; }
+      .container { padding: 0 16px; }
+      .topbar { padding: 0 16px; }
+      .hero { padding: 110px 0 50px; min-height: auto; }
+      .hero-heading { font-size: clamp(1.8rem, 8vw, 2.6rem); margin-bottom: 20px; }
+      .hero-sub { font-size: 14px; margin-bottom: 28px; line-height: 1.6; }
+      .hero-tag { font-size: 10px; padding: 5px 12px; margin-bottom: 24px; }
+      .section { padding: 64px 0; }
+      .section-heading { font-size: 1.5rem; }
+      .section-sub { font-size: 13px; margin-bottom: 32px; }
+      .section-label { font-size: 9px; }
+      .products-grid { grid-template-columns: 1fr; border-radius: 16px; }
+      .flow { grid-template-columns: 1fr; gap: 12px; }
+      .hero-metrics { gap: 20px; padding-top: 28px; }
+      .metric-value { font-size: 18px; }
+      .metric-label { font-size: 10px; }
+      .wallet-preview { border-radius: 18px; margin-top: 40px; }
+      .wallet-inner { padding: 16px; border-radius: 16px; }
+      .wallet-balance { font-size: 28px; }
+      .wallet-balance-sub { font-size: 11px; }
+      .wallet-right { padding: 16px; border-radius: 12px; }
+      .tx-name { font-size: 11px; }
+      .tx-amount { font-size: 12px; }
       .product-cell { padding: 24px 20px; }
-      .frost-card { padding: 24px; }
+      .product-num { font-size: 22px; }
+      .product-name { font-size: 15px; }
+      .product-desc { font-size: 12px; }
+      .flow-step { padding: 22px 18px; border-radius: 14px; }
+      .flow-num { font-size: 26px; }
+      .flow-title { font-size: 13px; }
+      .flow-desc { font-size: 11px; }
+      .sdk-card { padding: 24px; border-radius: 16px; }
+      .sdk-title { font-size: 15px; }
+      .sdk-body { font-size: 12px; }
+      .code-block { padding: 14px 16px; font-size: 11px; border-radius: 10px; }
+      .frost-card { padding: 20px; border-radius: 16px; }
+      .faq-item summary { padding: 16px 20px; font-size: 13px; }
+      .faq-answer { padding: 0 20px 16px; font-size: 12px; }
+      .cta-block { padding: 48px 0; }
+      .cta-heading { font-size: 1.3rem; }
+      .cta-sub { font-size: 13px; }
+      .btn-solid { padding: 11px 24px; font-size: 12px; }
+      .btn-outline { padding: 11px 24px; font-size: 12px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 40px; }
+      .hero-actions .btn-solid,
+      .hero-actions .btn-outline { width: 100%; text-align: center; display: block; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px 0; }
+      .footer-links { flex-wrap: wrap; gap: 14px; }
+      .footer-link { font-size: 11px; }
+      .wallet-chips { gap: 5px; }
+      .wallet-chip { padding: 5px 10px; font-size: 9px; }
+      .topbar-cta { padding: 7px 16px; font-size: 11px; }
+      .topbar-inner { height: 56px; }
+      .logo-text { font-size: 14px; letter-spacing: 0.12em; }
+      .logo-icon { width: 24px; height: 24px; font-size: 9px; border-radius: 6px; }
+      .divider { margin: 0; }
+    }
+
+    /* ── Extra small devices ── */
+    @media (max-width: 380px) {
+      .container { padding: 0 12px; }
+      .topbar { padding: 0 12px; }
+      .hero-heading { font-size: 1.6rem; }
+      .hero-sub { font-size: 13px; }
+      .hero-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .wallet-balance { font-size: 24px; }
+      .wallet-inner { padding: 14px; }
+      .product-cell { padding: 20px 16px; }
+      .flow-step { padding: 18px 14px; }
+      .faq-item summary { padding: 14px 16px; font-size: 12px; }
+      .faq-answer { padding: 0 16px 14px; font-size: 11px; }
+    }
+
+    /* ── Touch device improvements ── */
+    @media (hover: none) and (pointer: coarse) {
+      .product-cell:hover,
+      .flow-step:hover,
+      .sdk-card:hover,
+      .frost-card:hover { transform: none; }
+      .flow-step:active { transform: scale(0.98); }
+      .product-cell:active { background: rgba(255,255,255,0.03); }
+      .btn-solid:active { transform: scale(0.97); }
+      .btn-outline:active { transform: scale(0.97); background: var(--frost); }
+      .faq-item summary { -webkit-tap-highlight-color: transparent; }
+    }
+
+    /* ── Safe area for notched phones ── */
+    @supports (padding: env(safe-area-inset-bottom)) {
+      .footer { padding-bottom: calc(28px + env(safe-area-inset-bottom)); }
+      .topbar { padding-top: env(safe-area-inset-top); }
+      .mobile-nav { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
     }
 
     /* ── Mobile nav overlay ── */
@@ -812,8 +923,9 @@
       position: fixed;
       inset: 0;
       z-index: 199;
-      background: rgba(5,5,7,0.95);
-      backdrop-filter: blur(40px);
+      background: rgba(5,5,7,0.85);
+      backdrop-filter: blur(60px) saturate(1.4);
+      -webkit-backdrop-filter: blur(60px) saturate(1.4);
       flex-direction: column;
       align-items: center;
       justify-content: center;

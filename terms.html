@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Tranzo Labs</title>
+  <meta name="description" content="Tranzo Labs Terms of Service. Read our terms governing use of the Tranzo platform, wallet, card, and SDK.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #050507;
+      --frost: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --text: #f0f0f2;
+      --text-dim: rgba(255,255,255,0.5);
+      --text-ghost: rgba(255,255,255,0.25);
+      --heading: 'Space Grotesk', system-ui, sans-serif;
+      --body: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; transition: color 0.3s ease; }
+    a:hover { color: var(--text); }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+
+    .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 0 28px; background: rgba(5,5,7,0.6); backdrop-filter: blur(60px) saturate(1.4); -webkit-backdrop-filter: blur(60px) saturate(1.4); border-bottom: 1px solid var(--border); }
+    .topbar-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--border); background: var(--frost); display: grid; place-items: center; font-family: var(--heading); font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--text); }
+    .logo-text { font-family: var(--heading); font-size: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text); }
+    .back-link { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.3s ease; }
+    .back-link:hover { color: var(--text); }
+
+    .legal { padding: 120px 0 80px; }
+    .legal-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; color: var(--text-ghost); margin-bottom: 12px; }
+    .legal-title { font-family: var(--heading); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 600; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .legal-updated { font-size: 12px; color: var(--text-ghost); margin-bottom: 48px; }
+
+    .legal h2 { font-family: var(--heading); font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 40px 0 16px; }
+    .legal h3 { font-family: var(--heading); font-size: 15px; font-weight: 600; margin: 28px 0 12px; }
+    .legal p { font-size: 14px; color: var(--text-dim); line-height: 1.75; margin-bottom: 16px; font-weight: 300; }
+    .legal ul, .legal ol { margin: 0 0 16px 20px; }
+    .legal li { font-size: 14px; color: var(--text-dim); line-height: 1.75; margin-bottom: 8px; font-weight: 300; }
+
+    .footer { padding: 28px 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-left { font-size: 11px; color: var(--text-ghost); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-link { font-size: 12px; color: var(--text-ghost); text-decoration: none; transition: color 0.3s ease; }
+    .footer-link:hover { color: var(--text-dim); }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .topbar { padding: 0 16px; }
+      .legal { padding: 100px 0 60px; }
+      .legal h2 { font-size: 16px; margin: 32px 0 12px; }
+      .legal p, .legal li { font-size: 13px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">TZ</div>
+        <span class="logo-text">Tranzo</span>
+      </a>
+      <a href="/" class="back-link">&larr; Back to home</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <article class="legal">
+      <div class="legal-label">Legal</div>
+      <h1 class="legal-title">Terms of Service</h1>
+      <p class="legal-updated">Last updated: March 17, 2026</p>
+
+      <p>These Terms of Service ("Terms") govern your access to and use of the Tranzo platform, software wallet, hardware wallet, Dripper streaming payment service, Tranzo Card, Tranzo SDK, and any related services, tools, websites, or applications (collectively, the "Services") provided by Tranzo Labs ("Tranzo", "we", "us", or "our"). By accessing or using any of the Services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use the Services.</p>
+
+      <p>These Terms constitute a legally binding agreement between you and Tranzo Labs. Please read them carefully before using the Services. We reserve the right to update or modify these Terms at any time, and such changes will be effective upon posting. Your continued use of the Services after any such changes constitutes your acceptance of the revised Terms.</p>
+
+      <h2>1. Eligibility</h2>
+      <p>You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use the Services. By using the Services, you represent and warrant that you meet all eligibility requirements. If you are using the Services on behalf of an entity, you represent that you have the authority to bind that entity to these Terms.</p>
+      <p>You further represent and warrant that you are not (a) located in, or a citizen or resident of, any state, country, territory, or jurisdiction that is subject to comprehensive sanctions by the United States, the European Union, the United Kingdom, or any other applicable jurisdiction; (b) listed on any sanctioned persons or restricted persons list maintained by any government authority; or (c) otherwise prohibited from using the Services under any applicable law or regulation.</p>
+
+      <h2>2. Nature of the Services</h2>
+      <p>Tranzo provides a self-custodial wallet infrastructure and related financial technology tools. The Services are designed so that you maintain exclusive control over your private keys and funds at all times. Tranzo does not act as a custodian, bank, exchange, financial institution, money services business, or fiduciary in any capacity.</p>
+      <p>You understand and acknowledge that:</p>
+      <ul>
+        <li>Tranzo does not hold, store, control, or have access to your private keys, seed phrases, or funds at any time.</li>
+        <li>You are solely responsible for the security, backup, and safekeeping of your private keys and seed phrases. Loss of your private keys or seed phrases may result in permanent and irreversible loss of your funds.</li>
+        <li>Tranzo cannot recover, reset, or restore access to your wallet or funds if your private keys or seed phrases are lost, stolen, or compromised.</li>
+        <li>Tranzo acts solely as a technology provider, user interface, and transaction relay service. The platform facilitates your interactions with blockchain networks and payment rails but never takes custody of your assets.</li>
+        <li>The Dripper streaming payment service enables programmable, recurring fund transfers. Once initiated, streams execute according to their configured parameters. You are responsible for ensuring sufficient balance and correct configuration.</li>
+      </ul>
+
+      <h2>3. Tranzo Card</h2>
+      <p>The Tranzo Card is a payment instrument that allows you to spend funds from your self-custodial wallet at participating merchants, point-of-sale terminals, and online payment gateways. When you use the Tranzo Card:</p>
+      <ul>
+        <li>The system initiates a transaction request from your wallet. You authorize and sign transactions locally on your device using your private key.</li>
+        <li>Tranzo's backend settlement layer translates the wallet transaction into a payment that can be processed through standard card network payment rails (such as Visa, Mastercard, or RuPay networks).</li>
+        <li>At no point during this process does Tranzo take custody of your funds. The system acts as a relay and settlement coordinator.</li>
+        <li>Card transactions are subject to processing times, network fees, and settlement delays inherent in the underlying payment networks.</li>
+        <li>You are responsible for all transactions made using your Tranzo Card and for ensuring that your wallet contains sufficient funds to cover each transaction at the time of authorization.</li>
+        <li>The Tranzo Card is issued subject to additional terms and conditions that may be provided by our card issuing partners. You agree to comply with all such additional terms.</li>
+      </ul>
+
+      <h2>4. Tranzo SDK</h2>
+      <p>The Tranzo SDK is a software development kit that allows third-party developers and businesses to integrate Tranzo's wallet, Dripper, card, and account primitives into their own products and services. Use of the SDK is subject to the following additional terms:</p>
+      <ul>
+        <li>You may use the SDK solely for the purpose of building applications that interact with the Tranzo platform in accordance with our API documentation and developer guidelines.</li>
+        <li>You must not use the SDK to build applications that circumvent security measures, compromise user privacy, facilitate illegal activity, or violate these Terms.</li>
+        <li>Tranzo grants you a limited, non-exclusive, non-transferable, revocable license to use the SDK in accordance with these Terms and any applicable developer documentation.</li>
+        <li>Applications built using the SDK must clearly disclose to their end users the self-custodial nature of the wallet and the user's responsibility for their private keys.</li>
+      </ul>
+
+      <h2>5. User Responsibilities</h2>
+      <p>You agree to:</p>
+      <ul>
+        <li>Use the Services only for lawful purposes and in compliance with all applicable local, state, national, and international laws and regulations, including but not limited to anti-money laundering (AML), know-your-customer (KYC), counter-terrorism financing (CTF), and sanctions laws.</li>
+        <li>Not use the Services for any fraudulent, deceptive, or illegal activity, including money laundering, terrorist financing, tax evasion, or the circumvention of any sanctions or trade restrictions.</li>
+        <li>Maintain the confidentiality and security of your private keys, seed phrases, wallet credentials, and any authentication mechanisms associated with your use of the Services.</li>
+        <li>Not attempt to reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of any proprietary software provided as part of the Services, except to the extent permitted by applicable law.</li>
+        <li>Not interfere with, disrupt, or attempt to gain unauthorized access to the Services, servers, networks, or systems connected to the Services.</li>
+        <li>Not transmit any malware, viruses, worms, trojan horses, or other harmful code through or to the Services.</li>
+        <li>Promptly notify Tranzo of any unauthorized use of your account or any other breach of security you become aware of.</li>
+      </ul>
+
+      <h2>6. Fees and Charges</h2>
+      <p>Certain features of the Services may be subject to fees, including but not limited to network transaction fees (gas fees), card transaction processing fees, currency conversion fees, and premium feature subscription fees. All applicable fees will be clearly disclosed to you before you complete a transaction or subscribe to a service. Fees are non-refundable unless otherwise stated.</p>
+      <p>Blockchain network fees (gas fees) are determined by the underlying network and are not controlled by Tranzo. These fees may fluctuate based on network congestion and demand. You are solely responsible for paying all applicable network fees associated with your transactions.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>All intellectual property rights in the Services, including but not limited to software, code, user interfaces, designs, trademarks, logos, trade names, documentation, and content, are owned by or licensed to Tranzo Labs. Nothing in these Terms grants you any right, title, or interest in the Services or our intellectual property, except for the limited license to use the Services as expressly set forth herein.</p>
+      <p>The Tranzo name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Tranzo Labs. You must not use such marks without our prior written permission.</p>
+      <p>Any open-source components included in the Services are licensed under their respective open-source licenses. Nothing in these Terms limits or restricts your rights under applicable open-source licenses.</p>
+
+      <h2>8. Disclaimers</h2>
+      <p>THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, TRANZO DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+      <p>TRANZO DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE FROM VIRUSES OR OTHER HARMFUL COMPONENTS. TRANZO DOES NOT WARRANT THE ACCURACY, COMPLETENESS, OR TIMELINESS OF ANY INFORMATION PROVIDED THROUGH THE SERVICES.</p>
+      <p>TRANZO IS NOT A FINANCIAL ADVISOR, BROKER, DEALER, OR INVESTMENT ADVISOR. NOTHING IN THE SERVICES CONSTITUTES FINANCIAL, INVESTMENT, TAX, OR LEGAL ADVICE. YOU SHOULD CONSULT YOUR OWN PROFESSIONAL ADVISORS BEFORE MAKING ANY FINANCIAL DECISIONS.</p>
+      <p>YOU ACKNOWLEDGE THAT THE USE OF BLOCKCHAIN TECHNOLOGY, DIGITAL ASSETS, AND SELF-CUSTODIAL WALLETS INVOLVES SIGNIFICANT RISKS, INCLUDING BUT NOT LIMITED TO THE RISK OF TOTAL LOSS OF FUNDS, REGULATORY UNCERTAINTY, TECHNOLOGY FAILURES, AND MARKET VOLATILITY. YOU ASSUME ALL SUCH RISKS.</p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TRANZO LABS, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, PARTNERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, GOODWILL, DATA, USE, OR OTHER INTANGIBLE LOSSES, REGARDLESS OF WHETHER SUCH DAMAGES ARE BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, AND EVEN IF TRANZO HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+      <p>IN NO EVENT SHALL TRANZO'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR THE SERVICES EXCEED THE GREATER OF (A) THE TOTAL AMOUNT OF FEES PAID BY YOU TO TRANZO IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM, OR (B) ONE HUNDRED US DOLLARS (USD $100).</p>
+      <p>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. IN SUCH CASES, TRANZO'S LIABILITY SHALL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY LAW.</p>
+
+      <h2>10. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Tranzo Labs, its affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, damages, obligations, losses, liabilities, costs, and expenses (including reasonable attorney's fees) arising from: (a) your use of the Services; (b) your violation of these Terms; (c) your violation of any applicable law, regulation, or third-party right; (d) any content or data you submit, transmit, or otherwise make available through the Services; or (e) the loss, theft, or compromise of your private keys, seed phrases, or wallet credentials.</p>
+
+      <h2>11. Third-Party Services</h2>
+      <p>The Services may contain links to, or integrations with, third-party websites, applications, services, or resources, including but not limited to card network providers, blockchain networks, decentralized protocols, and payment processors. Tranzo is not responsible for the availability, accuracy, content, or practices of any third-party services. Your use of third-party services is at your own risk and subject to the terms and conditions of those third parties.</p>
+
+      <h2>12. Termination</h2>
+      <p>We may suspend or terminate your access to the Services at any time, with or without cause, and with or without notice. Upon termination, your right to use the Services will immediately cease. Because Tranzo is non-custodial, termination of your access to the Services does not affect your ability to access your funds using your private keys through other compatible wallet software or interfaces.</p>
+      <p>All provisions of these Terms that by their nature should survive termination shall survive, including but not limited to ownership provisions, warranty disclaimers, indemnification, and limitations of liability.</p>
+
+      <h2>13. Governing Law and Dispute Resolution</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of India, without regard to its conflict of law provisions. Any dispute arising out of or relating to these Terms or the Services shall be resolved through binding arbitration in accordance with the Arbitration and Conciliation Act, 1996, as amended. The seat of arbitration shall be Bengaluru, India. The language of the arbitration shall be English.</p>
+      <p>Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in any court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation, or violation of a party's intellectual property rights or confidential information.</p>
+      <p>YOU AGREE THAT ANY DISPUTE RESOLUTION PROCEEDINGS WILL BE CONDUCTED ONLY ON AN INDIVIDUAL BASIS AND NOT IN A CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION. YOU WAIVE ANY RIGHT TO PARTICIPATE IN CLASS ACTIONS OR CLASS-WIDE ARBITRATION.</p>
+
+      <h2>14. Modifications to the Services</h2>
+      <p>Tranzo reserves the right to modify, suspend, or discontinue any part of the Services at any time, with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Services. Because the wallet is self-custodial, your funds remain accessible through your private keys regardless of any changes to the Services.</p>
+
+      <h2>15. Severability</h2>
+      <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, or if modification is not possible, severed from these Terms. The remaining provisions shall continue in full force and effect.</p>
+
+      <h2>16. Entire Agreement</h2>
+      <p>These Terms, together with the Privacy Policy and any other legal notices or agreements published by Tranzo on the Services, constitute the entire agreement between you and Tranzo Labs concerning your use of the Services and supersede all prior or contemporaneous communications, proposals, and agreements, whether oral or written, between you and Tranzo regarding the Services.</p>
+
+      <h2>17. Contact</h2>
+      <p>If you have any questions, concerns, or feedback regarding these Terms of Service, please contact us at:</p>
+      <p>Tranzo Labs<br>Email: <a href="mailto:legal@tranzolabs.com">legal@tranzolabs.com</a><br>General inquiries: <a href="mailto:pranav@tranzolabs.com">pranav@tranzolabs.com</a></p>
+    </article>
+
+    <footer class="footer">
+      <div class="footer-left">&copy; 2025 Tranzo Labs. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/terms.html" class="footer-link">Terms</a>
+        <a href="/privacy.html" class="footer-link">Privacy</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

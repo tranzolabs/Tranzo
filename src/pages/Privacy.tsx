@@ -6,14 +6,14 @@ export const Privacy = () => {
   }, []);
 
   return (
-    <div className="pt-32 md:pt-48 pb-32 px-6 max-w-4xl mx-auto min-h-screen">
-      <div className="inline-block px-4 py-1.5 rounded-full border border-black/10 text-sm font-semibold text-black mb-8">
+    <div className="pt-28 sm:pt-32 md:pt-48 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6 max-w-4xl mx-auto min-h-screen">
+      <div className="inline-block px-3 sm:px-4 py-1.5 rounded-full border border-black/10 text-xs sm:text-sm font-semibold text-black mb-6 sm:mb-8">
         Legal Information
       </div>
-      <h1 className="text-5xl md:text-7xl font-extrabold tracking-[-0.04em] text-black mb-6 leading-[1.05]">
+      <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-[-0.04em] text-black mb-4 sm:mb-6 leading-[1.05]">
         Privacy <span className="text-[#727272]">Policy</span>
       </h1>
-      <p className="text-[#727272] text-lg mb-16 border-b border-black/10 pb-8">
+      <p className="text-[#727272] text-base sm:text-lg mb-10 sm:mb-16 border-b border-black/10 pb-6 sm:pb-8">
         Last updated: March 25, 2026
       </p>
 

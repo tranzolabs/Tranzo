@@ -2,41 +2,41 @@ import { motion } from 'framer-motion';
 
 export const ProductShowcase = () => {
   return (
-    <section className="py-24 md:py-40 px-6 border-y border-subtle bg-surface relative overflow-hidden">
-      <div className="max-w-7xl mx-auto text-center relative z-10">
+    <section className="py-32 md:py-48 px-6 border-y border-white/10 bg-[#000000] relative overflow-hidden flex justify-center">
+      <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-sm font-semibold text-[#8F8F99] border-b border-[#8F8F99]/30 pb-1 mb-8 inline-block">
+          <span className="text-sm font-semibold text-white/50 border-b border-white/20 pb-2 mb-12 inline-block tracking-widest uppercase">
             Hardware Access
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
-            The Tranzo Card. <br/> Strictly functional.
+          <h2 className="text-6xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-8 leading-[0.95]">
+            The Tranzo Card. <br/> <span className="text-[#A1A1AA]">Strictly functional.</span>
           </h2>
-          <p className="text-[#8F8F99] text-lg max-w-xl mx-auto mb-24 leading-relaxed">
+          <p className="text-[#A1A1AA] text-xl max-w-2xl mx-auto mb-24 leading-relaxed tracking-tight">
             A premium physical interface to your digital treasury. Execute point-of-sale transactions isolated from exchange volatility.
           </p>
         </motion.div>
 
         {/* Minimal 2D Card layout instead of glowing 3D */}
-        <div className="relative w-full max-w-lg mx-auto aspect-[1.586/1] border border-subtle rounded-xl bg-black shadow-glow overflow-hidden p-8 text-left flex flex-col justify-between">
+        <div className="relative w-full max-w-2xl mx-auto aspect-[1.586/1] border border-white/10 rounded-[48px] bg-[#111111] overflow-hidden p-12 text-left flex flex-col justify-between shadow-2xl">
             <div className="flex justify-between items-start">
-              <span className="text-sm font-bold tracking-widest text-[#E1E1E6]">TRANZO</span>
-              <div className="flex gap-1.5">
+              <span className="text-xl font-bold tracking-tighter text-white">TRANZO</span>
+              <div className="flex gap-2">
                 {[...Array(4)].map((_, i) => (
-                  <div key={i} className="w-8 h-8 rounded bg-white/[0.08] border border-subtle"></div>
+                  <div key={i} className="w-10 h-10 rounded-full bg-white/5 border border-white/10"></div>
                 ))}
               </div>
             </div>
             
             <div className="flex justify-between items-end">
-               <div className="text-xs font-mono text-[#8F8F99] tracking-widest">
+               <div className="text-lg font-bold tracking-[0.2em] text-[#A1A1AA]">
                  0000 0000 0000 0000
                </div>
-               <div className="w-12 h-12 bg-white flex items-center justify-center rounded-sm">
-                 <div className="w-6 h-6 border-4 border-black rounded-full"></div>
+               <div className="w-16 h-16 bg-white flex items-center justify-center rounded-2xl">
+                 <div className="w-8 h-8 border-[6px] border-black rounded-full"></div>
                </div>
             </div>
         </div>

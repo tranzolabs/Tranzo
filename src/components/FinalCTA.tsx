@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 
 export const FinalCTA = () => {
   return (
-    <section className="py-32 md:py-48 px-6 bg-[#08080b] text-center border-subtle border-b">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-40 md:py-64 px-6 bg-[#000000] text-center border-white/10 border-b">
+      <div className="max-w-5xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8"
+          className="text-7xl md:text-[120px] font-extrabold tracking-[-0.05em] text-white mb-16 leading-[0.95]"
         >
-          Unbound <span className="text-[#8F8F99]">potential.</span>
+          Unbound <br className="md:hidden" /><span className="text-[#A1A1AA]">potential.</span>
         </motion.h2>
         
         <motion.div
@@ -18,7 +18,7 @@ export const FinalCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
         >
-          <button className="px-8 py-3 rounded-md bg-white text-black font-semibold text-sm tracking-wide hover:bg-gray-200 transition-colors">
+          <button className="px-12 py-6 rounded-full bg-white text-black font-bold text-xl tracking-tight hover:scale-105 active:scale-95 transition-all">
             Initialize Engine
           </button>
         </motion.div>

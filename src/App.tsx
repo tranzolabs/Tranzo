@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { TrustBar } from './components/TrustBar';
 import { Features } from './components/Features';
 import { HowItWorks } from './components/HowItWorks';
 import { Benefits } from './components/Benefits';
@@ -15,7 +14,6 @@ import { Privacy } from './pages/Privacy';
 const Home = () => (
   <main>
     <Hero />
-    <TrustBar />
     <Features />
     <HowItWorks />
     <Benefits />

@@ -2,13 +2,13 @@ import { motion } from 'framer-motion';
 
 export const FinalCTA = () => {
   return (
-    <section className="py-40 md:py-64 px-6 bg-[#000000] text-center border-white/10 border-b">
+    <section className="py-24 md:py-64 px-6 bg-[#000000] text-center border-white/10 border-b">
       <div className="max-w-5xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-7xl md:text-[120px] font-extrabold tracking-[-0.05em] text-white mb-16 leading-[0.95]"
+          className="text-5xl md:text-[120px] font-extrabold tracking-[-0.05em] text-white mb-12 md:mb-16 leading-[0.95]"
         >
           Unbound <br className="md:hidden" /><span className="text-[#A1A1AA]">potential.</span>
         </motion.h2>

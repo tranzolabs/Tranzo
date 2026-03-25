@@ -18,7 +18,7 @@ export const Hero = () => {
 
         <motion.h1 
           initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-7xl md:text-[110px] font-extrabold tracking-[-0.05em] text-white max-w-5xl mx-auto leading-[0.95]"
+          className="text-5xl md:text-[110px] font-extrabold tracking-[-0.05em] text-white max-w-5xl mx-auto leading-[0.95]"
         >
           Move Money, <br className="hidden md:block" />
           <span className="text-[#A1A1AA]">Without Limits.</span>

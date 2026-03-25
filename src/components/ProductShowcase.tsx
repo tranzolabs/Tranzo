@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 
 export const ProductShowcase = () => {
   return (
-    <section className="py-32 md:py-48 px-6 border-y border-white/10 bg-[#000000] relative overflow-hidden flex justify-center">
+    <section className="py-24 md:py-48 px-6 border-y border-white/10 bg-[#000000] relative overflow-hidden flex justify-center">
       <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-sm font-semibold text-white/50 border-b border-white/20 pb-2 mb-12 inline-block tracking-widest uppercase">
+          <span className="text-xs md:text-sm font-semibold text-white/50 border-b border-white/20 pb-2 mb-8 md:mb-12 inline-block tracking-widest uppercase">
             Hardware Access
           </span>
-          <h2 className="text-6xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-8 leading-[0.95]">
+          <h2 className="text-4xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-8 leading-[0.95]">
             The Tranzo Card. <br/> <span className="text-[#A1A1AA]">Strictly functional.</span>
           </h2>
-          <p className="text-[#A1A1AA] text-xl max-w-2xl mx-auto mb-24 leading-relaxed tracking-tight">
+          <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl mx-auto mb-16 md:mb-24 leading-relaxed tracking-tight">
             A premium physical interface to your digital treasury. Execute point-of-sale transactions isolated from exchange volatility.
           </p>
         </motion.div>

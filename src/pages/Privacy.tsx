@@ -6,7 +6,7 @@ export const Privacy = () => {
   }, []);
 
   return (
-    <div className="pt-48 pb-32 px-6 max-w-4xl mx-auto min-h-screen">
+    <div className="pt-32 md:pt-48 pb-32 px-6 max-w-4xl mx-auto min-h-screen">
       <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 text-sm font-semibold text-white mb-8">
         Legal Information
       </div>

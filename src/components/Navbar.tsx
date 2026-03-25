@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -10,15 +12,16 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 flex justify-center">
-      <div className={`px-6 h-16 flex items-center justify-between w-full rounded-[32px] transition-all duration-300 ${scrolled ? 'bg-[#111111]/80 backdrop-blur-xl border border-white/10 shadow-glow' : 'bg-transparent'}`}>
+    <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50">
+      <div className={`px-4 sm:px-6 h-16 flex items-center justify-between w-full rounded-[32px] transition-all duration-300 relative ${scrolled || isOpen ? 'bg-[#111111]/90 backdrop-blur-xl border border-white/10' : 'bg-transparent border border-transparent'}`}>
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg border border-white/20 bg-white/5 flex items-center justify-center">
             <div className="w-2.5 h-2.5 bg-white rounded-sm rotate-45"></div>
           </div>
-          <span className="font-bold tracking-tighter text-white text-xl hidden sm:block">Tranzo</span>
+          <span className="font-bold tracking-tighter text-white text-xl hidden xs:block">Tranzo</span>
         </div>
 
+        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 text-sm font-medium text-[#A1A1AA]">
           <a href="#" className="hover:text-white transition-colors">Products</a>
           <a href="#" className="hover:text-white transition-colors">Platform</a>
@@ -30,7 +33,23 @@ export const Navbar = () => {
           <a href="mailto:connect@tranzo.money" className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 active:scale-95 transition-all inline-block">
             Get Started
           </a>
+          <button 
+            className="md:hidden p-2 text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isOpen && (
+          <div className="absolute top-[72px] left-0 w-full bg-[#111111]/95 backdrop-blur-2xl rounded-[32px] border border-white/10 p-8 md:hidden flex flex-col gap-6 text-sm font-medium animate-in fade-in slide-in-from-top-4 duration-300">
+            <a href="#" className="text-white">Products</a>
+            <a href="#" className="text-[#A1A1AA]">Platform</a>
+            <a href="#" className="text-[#A1A1AA]">Developers</a>
+            <a href="#" className="text-[#A1A1AA]">Company</a>
+          </div>
+        )}
       </div>
     </header>
   );

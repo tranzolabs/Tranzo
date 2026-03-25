@@ -23,12 +23,12 @@ const featuresData = [
 
 export const Features = () => {
   return (
-    <section className="py-24 md:py-40 px-6">
-      <div className="max-w-7xl mx-auto space-y-40">
+    <section className="py-20 md:py-40 px-6">
+      <div className="max-w-7xl mx-auto space-y-24 md:space-y-40">
         {featuresData.map((feature, idx) => (
           <div 
             key={idx} 
-            className={`flex flex-col ${feature.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16 md:gap-32 items-center`}
+            className={`flex flex-col ${feature.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-32 items-center`}
           >
             {/* Text */}
             <motion.div 
@@ -37,11 +37,11 @@ export const Features = () => {
               viewport={{ once: true, margin: "-10%" }}
               className="flex-1 w-full"
             >
-              <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 text-sm font-semibold text-white mb-8">{feature.label}</div>
-              <h2 className="text-5xl md:text-7xl font-extrabold tracking-[-0.04em] text-white mb-6 leading-[1.05]">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 text-sm font-semibold text-white mb-6 md:mb-8">{feature.label}</div>
+              <h2 className="text-4xl md:text-7xl font-extrabold tracking-[-0.04em] text-white mb-6 leading-[1.05]">
                 {feature.title}
               </h2>
-              <p className="text-[#A1A1AA] text-xl leading-relaxed max-w-lg">
+              <p className="text-[#A1A1AA] text-lg md:text-xl leading-relaxed max-w-lg">
                 {feature.description}
               </p>
             </motion.div>

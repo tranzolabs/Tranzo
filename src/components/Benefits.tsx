@@ -11,9 +11,9 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-32 md:py-48 px-6 border-t border-white/10 bg-[#000000]">
+    <section className="py-20 md:py-48 px-6 border-t border-white/10 bg-[#000000]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-24 max-w-2xl leading-[0.95]">
+        <h2 className="text-4xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-16 md:mb-24 max-w-2xl leading-[0.95]">
           Zero compromises. <br/> <span className="text-[#A1A1AA]">Pure velocity.</span>
         </h2>
         

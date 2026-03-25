@@ -10,6 +10,7 @@ import { ProductShowcase } from './components/ProductShowcase';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { Terms } from './pages/Terms';
+import { Privacy } from './pages/Privacy';
 
 const Home = () => (
   <main>
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <Footer />
       </div>

@@ -25,7 +25,7 @@ const Home = () => (
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-[#000000] min-h-screen text-white font-sans selection:bg-white selection:text-black">
+      <div className="bg-white min-h-screen text-black font-sans selection:bg-black selection:text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

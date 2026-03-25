@@ -4,7 +4,9 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 text-sm text-[#A1A1AA] mb-16">
         
         <div className="col-span-2 lg:col-span-2 space-y-4">
-          <img src="/logo.png" alt="Tranzo Logo" className="w-16 h-16 object-cover mix-blend-screen opacity-100 -ml-2 filter contrast-125" />
+          <div className="w-10 h-10 rounded-xl border border-white/20 bg-white/5 flex items-center justify-center mb-6">
+            <div className="w-3 h-3 bg-white rounded-[3px] rotate-45"></div>
+          </div>
           <p className="max-w-xs mt-4 text-lg font-medium leading-relaxed">
             The fundamental financial architecture for boundaryless scale.
           </p>

@@ -34,7 +34,7 @@ export const Navbar = () => {
           <a href="#" className="hover:text-black transition-colors">Product</a>
           <a href="#" className="hover:text-black transition-colors">Security</a>
           <a href="#" className="hover:text-black transition-colors">Docs</a>
-          <a href="mailto:connect@tranzo.money" className="hover:text-black transition-colors">Contact</a>
+          <a href="/contact" className="hover:text-black transition-colors">Contact</a>
         </nav>
 
         <div className="flex gap-2 sm:gap-4 items-center">
@@ -60,7 +60,7 @@ export const Navbar = () => {
               <a href="#" onClick={() => setIsOpen(false)} className="text-black text-base">Product</a>
               <a href="#" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Security</a>
               <a href="#" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Docs</a>
-              <a href="mailto:connect@tranzo.money" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Contact</a>
+              <a href="/contact" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Contact</a>
               <a href="mailto:connect@tranzo.money" className="bg-black text-white px-5 py-3 rounded-full text-sm font-bold text-center mt-2 active:scale-95 transition-all">
                 Get Started
               </a>

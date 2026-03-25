@@ -10,6 +10,7 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { Terms } from './pages/Terms';
 import { Privacy } from './pages/Privacy';
+import { Contact } from './pages/Contact';
 
 const Home = () => (
   <main>
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

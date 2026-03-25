@@ -27,7 +27,7 @@ export const Footer = () => {
             <ul className="space-y-3 sm:space-y-4 font-medium">
               <li><a href="#" className="hover:text-black transition-colors">Security</a></li>
               <li><a href="#" className="hover:text-black transition-colors">Docs</a></li>
-              <li><a href="mailto:connect@tranzo.money" className="hover:text-black transition-colors">Contact</a></li>
+              <li><a href="/contact" className="hover:text-black transition-colors">Contact</a></li>
               <li><a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a></li>
               <li><a href="/terms" className="hover:text-black transition-colors">Terms & Conditions</a></li>
             </ul>
@@ -48,8 +48,8 @@ export const Footer = () => {
         <div className="pt-6 sm:pt-8 border-t border-black/5 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0 text-xs text-[#727272]">
           <p>© 2026 Tranzo. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-black">Twitter</a>
-            <a href="#" className="hover:text-black">GitHub</a>
+            <a href="https://x.com/tranzolabs" target="_blank" rel="noopener noreferrer" className="hover:text-black">Twitter</a>
+            <a href="https://github.com/tranzolabs" target="_blank" rel="noopener noreferrer" className="hover:text-black">GitHub</a>
             <a href="#" className="hover:text-black">LinkedIn</a>
           </div>
         </div>

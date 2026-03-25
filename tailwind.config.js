@@ -18,16 +18,16 @@ export default {
     },
     extend: {
       colors: {
-        background: "#000000",
-        surface: "#111111",
-        surface2: "#1A1A1A",
+        background: "#FFFFFF",
+        surface: "#F5F5F7",
+        surface2: "#EBEBEB",
       },
       letterSpacing: {
         tighter: '-0.05em',
         tight: '-0.03em',
       },
       boxShadow: {
-        'glow': '0 0 40px -10px rgba(255, 255, 255, 0.05)',
+        'subtle': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
       }
     },
   },

@@ -8,22 +8,22 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-24 md:py-48 bg-[#000000] px-6 border-b border-white/10 relative">
+    <section className="py-24 md:py-48 bg-white px-6 border-b border-black/5 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-0 border border-white/10 bg-[#111111] rounded-[32px] md:rounded-[48px] overflow-hidden">
+        <div className="grid md:grid-cols-3 gap-0 border border-black/5 bg-[#F5F5F7] rounded-[32px] md:rounded-[48px] overflow-hidden shadow-sm">
           {steps.map((step, idx) => (
             <motion.div 
               key={step.id}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className={`flex flex-col p-8 md:p-16 border-white/10 border-t md:border-t-0 ${idx > 0 ? 'md:border-l' : ''} bg-[#0A0A0A]`}
+              className={`flex flex-col p-8 md:p-16 border-black/5 border-t md:border-t-0 ${idx > 0 ? 'md:border-l' : ''} bg-white transition-colors hover:bg-[#F9F9FB]`}
             >
-              <div className="text-xs md:text-sm font-semibold text-white/50 border-b border-white/10 pb-4 mb-10 md:mb-16 uppercase tracking-widest">
+              <div className="text-xs md:text-sm font-semibold text-black/30 border-b border-black/5 pb-4 mb-10 md:mb-16 uppercase tracking-widest">
                  Step 0{step.id} — Execution
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-[-0.04em]">{step.title}</h3>
-              <p className="text-[#A1A1AA] text-base md:text-lg leading-relaxed max-w-sm">{step.desc}</p>
+              <h3 className="text-3xl md:text-4xl font-bold text-black mb-4 tracking-[-0.04em]">{step.title}</h3>
+              <p className="text-[#727272] text-base md:text-lg leading-relaxed max-w-sm">{step.desc}</p>
             </motion.div>
           ))}
         </div>

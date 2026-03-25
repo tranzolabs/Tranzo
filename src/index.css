@@ -4,18 +4,18 @@
 
 @layer base {
   body {
-    @apply bg-background text-[#EDEDED] antialiased overflow-x-hidden selection:bg-white selection:text-black;
+    @apply bg-background text-[#111111] antialiased overflow-x-hidden selection:bg-black selection:text-white;
   }
 }
 
 @layer utilities {
   .border-subtle {
-    @apply border border-white/[0.08];
+    @apply border border-black/[0.05];
   }
 }
 
 .text-gradient {
-  background: linear-gradient(to bottom, #ffffff 30%, #a4a4ac 100%);
+  background: linear-gradient(to bottom, #111111 30%, #555555 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -28,7 +28,7 @@
   transform: translateX(-50%);
   width: 1200px;
   height: 400px;
-  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.05), transparent 70%);
+  background: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.03), transparent 70%);
   z-index: -1;
   pointer-events: none;
 }

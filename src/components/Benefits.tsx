@@ -11,23 +11,23 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-20 md:py-48 px-6 border-t border-white/10 bg-[#000000]">
+    <section className="py-20 md:py-48 px-6 border-t border-black/5 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-[90px] font-extrabold tracking-[-0.05em] text-white mb-16 md:mb-24 max-w-2xl leading-[0.95]">
-          Zero compromises. <br/> <span className="text-[#A1A1AA]">Pure velocity.</span>
+        <h2 className="text-4xl md:text-[90px] font-extrabold tracking-[-0.05em] text-black mb-16 md:mb-24 max-w-2xl leading-[0.95]">
+          Zero compromises. <br/> <span className="text-[#727272]">Pure velocity.</span>
         </h2>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, idx) => (
             <div 
               key={idx}
-              className="p-10 md:p-14 bg-[#111111] hover:bg-[#1A1A1A] transition-colors relative border border-white/10 rounded-[36px]"
+              className="p-10 md:p-14 bg-[#F5F5F7] hover:bg-[#EBEBEB] transition-all relative border border-black/5 rounded-[36px] group"
             >
-              <div className="w-14 h-14 border border-white/10 rounded-2xl bg-[#0A0A0A] mb-12 flex items-center justify-center">
-                 <div className="w-4 h-4 rounded-full bg-white"></div>
+              <div className="w-14 h-14 border border-black/5 rounded-2xl bg-white mb-12 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                 <div className="w-4 h-4 rounded-full bg-black"></div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 tracking-[-0.03em]">{benefit.title}</h3>
-              <p className="text-[#A1A1AA] text-lg leading-relaxed">{benefit.desc}</p>
+              <h3 className="text-2xl font-bold text-black mb-4 tracking-[-0.03em]">{benefit.title}</h3>
+              <p className="text-[#727272] text-lg leading-relaxed">{benefit.desc}</p>
             </div>
           ))}
         </div>

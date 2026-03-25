@@ -14,10 +14,10 @@ import { Privacy } from './pages/Privacy';
 const Home = () => (
   <main>
     <Hero />
-    <Features />
     <HowItWorks />
-    <Benefits />
+    <Features />
     <ProductShowcase />
+    <Benefits />
     <FinalCTA />
   </main>
 );

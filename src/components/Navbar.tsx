@@ -23,10 +23,10 @@ export const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 text-sm font-medium text-[#727272]">
-          <a href="#" className="hover:text-black transition-colors">Products</a>
-          <a href="#" className="hover:text-black transition-colors">Platform</a>
-          <a href="#" className="hover:text-black transition-colors">Developers</a>
-          <a href="#" className="hover:text-black transition-colors">Company</a>
+          <a href="#" className="hover:text-black transition-colors">Product</a>
+          <a href="#" className="hover:text-black transition-colors">Security</a>
+          <a href="#" className="hover:text-black transition-colors">Docs</a>
+          <a href="mailto:connect@tranzo.money" className="hover:text-black transition-colors">Contact</a>
         </nav>
 
         <div className="flex gap-4 items-center">
@@ -44,10 +44,10 @@ export const Navbar = () => {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div className="absolute top-[72px] left-0 w-full bg-[#F5F5F7]/95 backdrop-blur-2xl rounded-[32px] border border-black/5 p-8 md:hidden flex flex-col gap-6 text-sm font-medium animate-in fade-in slide-in-from-top-4 duration-300 shadow-xl">
-            <a href="#" className="text-black">Products</a>
-            <a href="#" className="text-[#727272]">Platform</a>
-            <a href="#" className="text-[#727272]">Developers</a>
-            <a href="#" className="text-[#727272]">Company</a>
+            <a href="#" className="text-black">Product</a>
+            <a href="#" className="text-[#727272]">Security</a>
+            <a href="#" className="text-[#727272]">Docs</a>
+            <a href="mailto:connect@tranzo.money" className="text-[#727272]">Contact</a>
           </div>
         )}
       </div>

@@ -8,24 +8,25 @@ export const Footer = () => {
             <div className="w-3 h-3 bg-black rounded-[3px] rotate-45"></div>
           </div>
           <p className="max-w-xs mt-4 text-lg font-medium leading-relaxed text-black/80">
-            The fundamental financial architecture for boundaryless scale.
+            The modern way to own and spend crypto.
           </p>
         </div>
 
         <div>
-          <h4 className="font-bold text-black mb-6 tracking-tight">Platform</h4>
+          <h4 className="font-bold text-black mb-6 tracking-tight">Product</h4>
           <ul className="space-y-4 font-medium">
-            <li><a href="#" className="hover:text-black transition-colors">Global Accounts</a></li>
-            <li><a href="#" className="hover:text-black transition-colors">Treasury API</a></li>
-            <li><a href="https://tranzo.money" className="hover:text-black transition-colors">Main Site</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Wallet</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Crypto Card</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Dripper Wallet</a></li>
           </ul>
         </div>
         
         <div>
           <h4 className="font-bold text-black mb-6 tracking-tight">Company</h4>
           <ul className="space-y-4 font-medium">
-            <li><a href="#" className="hover:text-black transition-colors">Vision</a></li>
-            <li><a href="#" className="hover:text-black transition-colors">Contact</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Security</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Docs</a></li>
+            <li><a href="mailto:connect@tranzo.money" className="hover:text-black transition-colors">Contact</a></li>
             <li><a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a></li>
             <li><a href="/terms" className="hover:text-black transition-colors">Terms & Conditions</a></li>
           </ul>
@@ -38,7 +39,7 @@ export const Footer = () => {
              <div className="w-3 h-3 rounded-full bg-black/10"></div>
           </div>
           <p className="mt-4 text-xs max-w-xs leading-relaxed">
-            Build perfectly scalable financial instruments without the headaches of traditional banking rails.
+            Build with Tranzo. Full API access to wallet, card, and payment infrastructure.
           </p>
         </div>
       </div>

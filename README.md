@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# Tranzo.money
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Tranzo Preview](https://github.com/tranzolabs/Tranzo/assets/preview-placeholder)
 
-Currently, two official plugins are available:
+The fundamental financial architecture for boundaryless scale. **Tranzo** is a premium, minimalist Web3 fintech interface built with extreme brutalist design principles—abandoning complex gradients and clutter for stark monochrome rendering, absolute legibility, and massive typography.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚡ Tech Stack
 
-## React Compiler
+Engineered for raw velocity and flawless transitions:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite (Ultra-fast HMR)
+- **Styling:** Tailwind CSS (Pure Monochrome Palette configuration)
+- **Animations:** Framer Motion
+- **Routing:** React Router v6
 
-## Expanding the ESLint configuration
+## 🕶 Design Philosophy (The Avici Standard)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The frontend adheres to strict visually-driven parameters:
+- **No Colors:** Pure `#000000` backgrounds, `#111111` surfaces, and `#FFFFFF` contrasting typography.
+- **Aggressive Typography:** Overly massive `font-sans` headings (`Inter` natively injected) featuring uncomfortably tight tracking (`tracking-[-0.05em]`) for that definitive brutalist weight.
+- **Glassmorphism:** Absolute minimal borders (`border-white/10`) coupled with extensive frosted glass backdrops (`backdrop-blur-xl`).
+- **Pill Arrays:** Heavy emphasis on gigantic border radii (`rounded-[48px]`, `rounded-[32px]`) to establish deep bento-box layouts.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To initialize the development server locally:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/tranzolabs/Tranzo.git
+
+# Enter the directory
+cd tranzo-landing
+
+# Install dependencies (NPM or Yarn)
+npm install
+
+# Boot development engine
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `/src/components` - The core building blocks (Navbar, Hero, Benefits, ProductShowcase, Features, FinalCTA)
+- `/src/pages` - Legal and routed domains (`Terms.tsx`, `Privacy.tsx`)
+- `index.css` - Global zero-color resets and base typography injections
+- `tailwind.config.js` - Stripped down theme configuration
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 Deployment
+
+This application is strictly optimized for **Vercel** with integrated SPA rewrites (`vercel.json`) to gracefully handle `react-router-dom` deep links like `/terms` and `/privacy`.
+
+Simply connect the repository to your Vercel project and deploy with ZERO build configuration required.
+
+## 📜 Legal Links
+
+Includes heavily vetted and dynamically formatted placeholder pages for:
+- [Privacy Policy](/privacy)
+- [Terms & Conditions](/terms)
+
+---
+*Built to execute point-of-sale transactions isolated from exchange volatility.*

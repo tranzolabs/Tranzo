@@ -1,9 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useWaitlist } from '../context/WaitlistContext';
 
 export const Hero = () => {
-  const { open } = useWaitlist();
   return (
     <section className="relative pt-36 sm:pt-44 md:pt-48 pb-20 md:pb-32 px-4 sm:px-6 overflow-hidden flex flex-col items-center">
       <div className="bg-hero-glow"></div>
@@ -43,9 +41,9 @@ export const Hero = () => {
             Get Started
             <ArrowRight size={18} className="sm:w-5 sm:h-5" />
           </a>
-          <button onClick={open} className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg font-bold border border-black/10 text-black hover:bg-black/[0.03] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+          <a href="mailto:connect@tranzo.money" className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg font-bold border border-black/10 text-black hover:bg-black/[0.03] hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
             Join Waitlist
-          </button>
+          </a>
         </motion.div>
 
         <motion.div 

@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useWaitlist } from '../context/WaitlistContext';
 
 export const FinalCTA = () => {
-  const { open } = useWaitlist();
   return (
     <section className="py-20 sm:py-24 md:py-64 px-4 sm:px-6 bg-white text-center border-black/5 border-b">
       <div className="max-w-5xl mx-auto">
@@ -35,9 +33,9 @@ export const FinalCTA = () => {
             Get Started
             <ArrowRight size={18} className="sm:w-5 sm:h-5 md:w-[22px] md:h-[22px]" />
           </a>
-          <button onClick={open} className="inline-flex items-center justify-center gap-2 px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full border border-black/10 text-black font-bold text-base sm:text-lg md:text-xl tracking-tight hover:bg-black/[0.03] hover:scale-105 active:scale-95 transition-all">
+          <a href="mailto:connect@tranzo.money" className="inline-flex items-center justify-center gap-2 px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full border border-black/10 text-black font-bold text-base sm:text-lg md:text-xl tracking-tight hover:bg-black/[0.03] hover:scale-105 active:scale-95 transition-all">
             Join Waitlist
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

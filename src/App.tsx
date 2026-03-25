@@ -10,6 +10,8 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { Terms } from './pages/Terms';
 import { Privacy } from './pages/Privacy';
+import { WaitlistProvider } from './context/WaitlistContext';
+import { WaitlistModal } from './components/WaitlistModal';
 
 const Home = () => (
   <main>
@@ -25,15 +27,18 @@ const Home = () => (
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-white min-h-screen text-black font-sans selection:bg-black selection:text-white">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<Privacy />} />
-        </Routes>
-        <Footer />
-      </div>
+      <WaitlistProvider>
+        <div className="bg-white min-h-screen text-black font-sans selection:bg-black selection:text-white">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+          </Routes>
+          <Footer />
+        </div>
+        <WaitlistModal />
+      </WaitlistProvider>
     </BrowserRouter>
   );
 }

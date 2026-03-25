@@ -2,41 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-background text-[#EDEDED] antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white;
+  }
+}
+
 @layer utilities {
-  .glass {
-    @apply bg-surface/40 backdrop-blur-xl border border-white/5 shadow-2xl;
-  }
-  .glass-card {
-    @apply bg-surface2/60 backdrop-blur-md border border-white/10 rounded-2xl;
-  }
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-purple to-brand-indigo;
+  .border-subtle {
+    @apply border border-white/[0.06];
   }
 }
 
-body {
-  margin: 0;
-  background-color: #0B0B0F;
-  color: #ffffff;
-  overflow-x: hidden;
+.text-gradient {
+  background: linear-gradient(to right, #ffffff 30%, #a4a4ac 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.bg-grid {
-  background-size: 50px 50px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-}
-
-.glow-bg {
+.bg-hero-glow {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(60px);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 400px;
+  background: radial-gradient(ellipse at top, rgba(124, 74, 239, 0.1), transparent 70%);
   z-index: -1;
   pointer-events: none;
 }

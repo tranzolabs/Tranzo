@@ -1,60 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        scrolled 
-          ? 'bg-surface/80 backdrop-blur-xl border-white/10 py-4 shadow-2xl' 
-          : 'bg-transparent border-transparent py-6'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-blue to-brand-purple flex items-center justify-center">
-            <div className="w-3 h-3 bg-white rounded-sm rotate-45"></div>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-subtle ${scrolled ? 'bg-[#08080b]/80 backdrop-blur-xl' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-6 h-6 rounded bg-white flex items-center justify-center">
+            <div className="w-2 h-2 bg-black rounded-sm rotate-45"></div>
           </div>
-          <span className="text-xl font-bold tracking-tight text-white">Tranzo</span>
+          <span className="font-bold tracking-tight text-white">Tranzo</span>
         </div>
 
-        {/* Links */}
-        <nav className="hidden md:flex items-center gap-8">
-          {['Features', 'Pricing', 'Docs', 'Company'].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`} 
-              className="text-sm font-medium text-gray-text hover:text-white transition-colors"
-            >
-              {item}
-            </a>
-          ))}
+        <nav className="hidden md:flex gap-8 text-sm font-medium text-[#8F8F99]">
+          <a href="#" className="hover:text-white transition-colors">Products</a>
+          <a href="#" className="hover:text-white transition-colors">Pricing</a>
+          <a href="#" className="hover:text-white transition-colors">Developers</a>
+          <a href="#" className="hover:text-white transition-colors">Company</a>
         </nav>
 
-        {/* CTA */}
-        <div className="flex items-center gap-4">
-          <a href="#" className="hidden md:block text-sm font-medium text-white hover:text-brand-blue transition-colors">
-            Log in
-          </a>
-          <button className="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300">
+        <div className="flex gap-6 items-center">
+          <a href="#" className="text-sm font-medium text-[#8F8F99] hover:text-white transition-colors">Log In</a>
+          <button className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
             Get Started
           </button>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 };

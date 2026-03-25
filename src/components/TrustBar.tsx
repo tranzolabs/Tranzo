@@ -1,16 +1,12 @@
-import React from 'react';
-
 export const TrustBar = () => {
   return (
-    <section className="py-16 border-y border-white/5 bg-white/[0.01] backdrop-blur-sm px-6 md:px-12">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <p className="text-sm text-gray-500 uppercase tracking-[0.2em] font-medium mb-10 text-center">
-          Powering next-generation finance
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale transition-all duration-500 hover:opacity-80">
-          {['Aura', 'NovaTech', 'Quantum', 'Synthetix', 'Oasis'].map((company) => (
-            <div key={company} className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-white/20"></div>
+    <section className="py-20 border-y border-subtle bg-[#08080b] px-6 text-center">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700">
+        <p className="text-xs font-mono text-white mb-8 md:mb-0 uppercase tracking-widest text-left">Trusted Infrastructure Partners</p>
+        <div className="flex flex-wrap justify-center gap-12 md:gap-16">
+          {['Nexus', 'Synthetix', 'Quantum', 'Oasis Global'].map((company) => (
+            <div key={company} className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-white/[0.2]"></div>
               {company}
             </div>
           ))}

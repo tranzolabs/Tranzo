@@ -5,38 +5,26 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
-        background: "#0B0B0F",
-        surface: "#111218",
-        surface2: "#15161C",
-        gray: {
-          muted: "#A0A3B1",
-          dark: "#1A1A24"
-        },
+        background: "#08080b",
+        surface: "#111115",
+        surface2: "#18181c",
         brand: {
-          blue: "#3B82F6",
-          purple: "#8B5CF6",
-          indigo: "#6366F1",
+          light: "#E1E1E6",
+          blue: "#4a72ff",
+          purple: "#7c4aef"
         }
       },
-      fontFamily: {
-        sans: ['Inter', 'Satoshi', 'sans-serif'],
+      letterSpacing: {
+        tighter: '-0.04em',
+        tight: '-0.02em',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #3B82F655 0deg, #8B5CF655 180deg, #6366F155 360deg)',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out 3s infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        }
+      boxShadow: {
+        'glow': '0 0 40px -10px rgba(124, 74, 239, 0.15)',
       }
     },
   },

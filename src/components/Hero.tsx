@@ -35,9 +35,9 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-bold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
-            Download App
-          </button>
+          <a href="mailto:connect@tranzo.money" className="bg-white text-black px-8 py-4 rounded-full text-lg font-bold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+            Get Started
+          </a>
         </motion.div>
 
         {/* Minimal Premium Phone Mockup */}

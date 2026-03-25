@@ -18,9 +18,9 @@ export const FinalCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
         >
-          <button className="px-12 py-6 rounded-full bg-white text-black font-bold text-xl tracking-tight hover:scale-105 active:scale-95 transition-all">
-            Initialize Engine
-          </button>
+          <a href="mailto:connect@tranzo.money" className="inline-block px-12 py-6 rounded-full bg-white text-black font-bold text-xl tracking-tight hover:scale-105 active:scale-95 transition-all">
+            Get Started
+          </a>
         </motion.div>
       </div>
     </section>

@@ -25,10 +25,9 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex gap-4 items-center">
-          <a href="#" className="text-sm font-medium text-white hidden sm:block hover:text-gray-300 transition-colors">Log In</a>
-          <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+          <a href="mailto:connect@tranzo.money" className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:scale-105 active:scale-95 transition-all inline-block">
             Get Started
-          </button>
+          </a>
         </div>
       </div>
     </header>

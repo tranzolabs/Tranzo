@@ -16,9 +16,9 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-black mb-4 sm:mb-6 tracking-tight">Product</h4>
             <ul className="space-y-3 sm:space-y-4 font-medium">
-              <li><a href="#" className="hover:text-black transition-colors">Wallet</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Crypto Card</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Dripper Wallet</a></li>
+              <li><a href="/wallet" className="hover:text-black transition-colors">Wallet</a></li>
+              <li><a href="/crypto-card" className="hover:text-black transition-colors">Crypto Card</a></li>
+              <li><a href="/dripper-wallet" className="hover:text-black transition-colors">Dripper Wallet</a></li>
             </ul>
           </div>
           

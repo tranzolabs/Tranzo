@@ -23,12 +23,12 @@ export const Navbar = () => {
   return (
     <header className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 w-[94%] sm:w-[90%] max-w-5xl z-50">
       <div className={`px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between w-full rounded-2xl sm:rounded-[32px] transition-all duration-300 relative ${scrolled || isOpen ? 'bg-[#F5F5F7]/90 backdrop-blur-xl border border-black/5' : 'bg-transparent border border-transparent'}`}>
-        <div className="flex items-center gap-2 sm:gap-3">
+        <a href="/" className="flex items-center gap-2 sm:gap-3">
           <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-lg border border-black/10 bg-black/5 flex items-center justify-center flex-shrink-0">
             <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-black rounded-sm rotate-45"></div>
           </div>
           <span className="font-bold tracking-tighter text-black text-lg sm:text-xl">Tranzo</span>
-        </div>
+        </a>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium text-[#727272]">
           <a href="#" className="hover:text-black transition-colors">Product</a>

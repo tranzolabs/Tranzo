@@ -3,73 +3,83 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-40 pb-32 px-6 overflow-hidden">
+    <section className="relative pt-48 pb-32 px-6 overflow-hidden flex flex-col items-center">
       <div className="bg-hero-glow"></div>
       
-      <div className="max-w-7xl mx-auto mt-16 md:mt-24">
-        <div className="flex flex-col text-center items-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex gap-2 items-center px-3 py-1 rounded-full border border-subtle bg-white/[0.02] text-xs font-semibold text-[#8F8F99] mb-8"
-          >
-            <span>v2.0 Release</span>
-            <span className="w-1 h-1 rounded-full bg-[#E1E1E6]"></span>
-            <span>Optimized routing engine live</span>
-          </motion.div>
+      <div className="max-w-7xl mx-auto w-full flex flex-col items-center text-center mt-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+          className="inline-flex gap-2 items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-sm font-medium text-[#A1A1AA] mb-10"
+        >
+          <span>Tranzo v2.0</span>
+          <span className="w-1 h-1 rounded-full bg-white"></span>
+          <span>The new standard</span>
+        </motion.div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-6xl md:text-8xl font-bold tracking-tighter text-white max-w-4xl mx-auto leading-[1.05]"
-          >
-            Internet-native <br/>
-            <span className="text-[#8F8F99] font-medium tracking-tight">financial primitives.</span>
-          </motion.h1>
+        <motion.h1 
+          initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-7xl md:text-[110px] font-extrabold tracking-[-0.05em] text-white max-w-5xl mx-auto leading-[0.95]"
+        >
+          Move Money, <br className="hidden md:block" />
+          <span className="text-[#A1A1AA]">Without Limits.</span>
+        </motion.h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#8F8F99] text-lg md:text-xl max-w-2xl mx-auto mt-8 mb-12 leading-relaxed"
-          >
-            Buy, save, spend, and scale perfectly. We stripped the complexity from banking so you can focus entirely on capital velocity.
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
-          >
-            <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-              Start building <ArrowRight className="w-4 h-4"/>
-            </button>
-            <button className="bg-transparent text-white border border-subtle px-6 py-3 rounded-full font-semibold hover:bg-white/[0.05] transition-colors flex items-center justify-center">
-              Explore Documentation
-            </button>
-          </motion.div>
-        </div>
+        <motion.p 
+          initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-[#A1A1AA] text-xl md:text-2xl max-w-2xl mx-auto mt-10 mb-12 leading-relaxed tracking-tight"
+        >
+          Spend easily via secured credit card using crypto while having full control of your funds. Zero compromises.
+        </motion.p>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+        >
+          <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-bold hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+            Download App
+          </button>
+        </motion.div>
 
-        {/* Minimal Dashboard Mockup */}
+        {/* Minimal Premium Phone Mockup */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-24 w-full aspect-video max-w-5xl mx-auto rounded-xl border border-subtle bg-[#0c0c10] shadow-glow overflow-hidden relative flex"
+          className="mt-28 w-full max-w-3xl mx-auto relative flex justify-center"
         >
-          {/* Sidebar */}
-          <div className="w-64 border-r border-subtle hidden md:block bg-[#111115] p-6 space-y-4">
-            <div className="h-6 w-24 bg-white/[0.08] rounded mb-8"></div>
-            <div className="h-4 w-full bg-white/[0.03] rounded"></div>
-            <div className="h-4 w-3/4 bg-white/[0.03] rounded"></div>
-            <div className="h-4 w-4/5 bg-white/[0.03] rounded"></div>
-            <div className="h-4 w-1/2 bg-brand-purple/20 rounded mt-8"></div>
-          </div>
-          {/* Main Area */}
-          <div className="flex-1 p-8">
-             <div className="h-12 w-48 bg-white/[0.08] rounded mb-12"></div>
-             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                {[...Array(3)].map((_, i) => (
-                  <div key={i} className="h-32 bg-white/[0.02] border border-subtle rounded-lg p-6">
-                    <div className="h-4 w-8 bg-white/[0.1] rounded mb-8"></div>
-                    <div className="h-8 w-24 bg-white/[0.05] rounded"></div>
-                  </div>
-                ))}
+          {/* Phone Frame */}
+          <div className="w-[340px] h-[700px] border-[8px] border-[#222] rounded-[56px] bg-[#0A0A0A] overflow-hidden relative shadow-[0_0_80px_rgba(255,255,255,0.05)]">
+            {/* Notch */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-[#222] rounded-b-3xl z-20"></div>
+            
+            {/* Inner App Interface */}
+            <div className="p-6 pt-16 flex flex-col h-full bg-[#111]">
+               <div className="flex justify-between items-center mb-8">
+                  <div className="w-10 h-10 rounded-full bg-white/10"></div>
+                  <div className="w-10 h-10 rounded-full bg-white/10"></div>
+               </div>
+
+               {/* Card Component inside phone */}
+               <div className="w-full h-48 rounded-[32px] bg-gradient-to-br from-white/20 to-white/5 border border-white/10 p-6 flex flex-col justify-between mb-8 relative overflow-hidden backdrop-blur-md">
+                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                 <div className="text-white/60 text-sm font-medium">Virtual Card</div>
+                 <div>
+                   <div className="text-white font-bold tracking-widest mb-1">•••• •••• •••• 5546</div>
+                   <div className="text-white/60 text-xs">02/28</div>
+                 </div>
+               </div>
+
+               <div className="text-[#A1A1AA] text-sm font-medium mb-4">Spending Balance</div>
+               <div className="text-5xl font-bold tracking-tighter text-white mb-8">$12,450.00</div>
+
+               {/* Action Buttons */}
+               <div className="grid grid-cols-4 gap-4 mb-8">
+                 {[...Array(4)].map((_, i) => (
+                   <div key={i} className="flex flex-col items-center gap-2">
+                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center"></div>
+                     <div className="h-2 w-8 bg-white/10 rounded-full"></div>
+                   </div>
+                 ))}
+               </div>
             </div>
-            <div className="mt-8 h-48 bg-white/[0.02] border border-subtle rounded-lg"></div>
           </div>
         </motion.div>
       </div>

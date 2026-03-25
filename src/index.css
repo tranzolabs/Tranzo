@@ -4,18 +4,18 @@
 
 @layer base {
   body {
-    @apply bg-background text-[#EDEDED] antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white;
+    @apply bg-background text-[#EDEDED] antialiased overflow-x-hidden selection:bg-white selection:text-black;
   }
 }
 
 @layer utilities {
   .border-subtle {
-    @apply border border-white/[0.06];
+    @apply border border-white/[0.08];
   }
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #ffffff 30%, #a4a4ac 100%);
+  background: linear-gradient(to bottom, #ffffff 30%, #a4a4ac 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -23,12 +23,12 @@
 
 .bg-hero-glow {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
+  width: 1200px;
   height: 400px;
-  background: radial-gradient(ellipse at top, rgba(124, 74, 239, 0.1), transparent 70%);
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.05), transparent 70%);
   z-index: -1;
   pointer-events: none;
 }

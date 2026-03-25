@@ -10,21 +10,16 @@ export default {
     },
     extend: {
       colors: {
-        background: "#08080b",
-        surface: "#111115",
-        surface2: "#18181c",
-        brand: {
-          light: "#E1E1E6",
-          blue: "#4a72ff",
-          purple: "#7c4aef"
-        }
+        background: "#000000",
+        surface: "#111111",
+        surface2: "#1A1A1A",
       },
       letterSpacing: {
-        tighter: '-0.04em',
-        tight: '-0.02em',
+        tighter: '-0.05em',
+        tight: '-0.03em',
       },
       boxShadow: {
-        'glow': '0 0 40px -10px rgba(124, 74, 239, 0.15)',
+        'glow': '0 0 40px -10px rgba(255, 255, 255, 0.05)',
       }
     },
   },

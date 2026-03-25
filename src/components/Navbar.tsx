@@ -84,7 +84,7 @@ export const Navbar = () => {
           </div>
 
           <a href="/hardware-wallet" className="hover:text-black transition-colors">Security</a>
-          <a href="/docs" className="hover:text-black transition-colors">Docs</a>
+          <a href="/uptime" className="hover:text-black transition-colors">Uptime</a>
           <a href="/contact" className="hover:text-black transition-colors">Contact</a>
         </nav>
 
@@ -141,7 +141,7 @@ export const Navbar = () => {
               </div>
 
               <a href="/hardware-wallet" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Security</a>
-              <a href="/docs" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Docs</a>
+              <a href="/uptime" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Uptime</a>
               <a href="/contact" onClick={() => setIsOpen(false)} className="text-[#727272] text-base">Contact</a>
               <a href="mailto:connect@tranzo.money" className="bg-black text-white px-5 py-3 rounded-full text-sm font-bold text-center mt-2 active:scale-95 transition-all">
                 Get Started

@@ -15,6 +15,7 @@ import { Wallet } from './pages/Wallet';
 import { CryptoCard } from './pages/CryptoCard';
 import { DripperWallet } from './pages/DripperWallet';
 import { HardwareWallet } from './pages/HardwareWallet';
+import { Docs } from './pages/Docs';
 
 const Home = () => (
   <main>
@@ -41,6 +42,7 @@ function App() {
           <Route path="/crypto-card" element={<CryptoCard />} />
           <Route path="/dripper-wallet" element={<DripperWallet />} />
           <Route path="/hardware-wallet" element={<HardwareWallet />} />
+          <Route path="/docs" element={<Docs />} />
         </Routes>
         <Footer />
       </div>

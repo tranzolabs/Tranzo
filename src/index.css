@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    color-scheme: light only;
+  }
   body {
     @apply bg-background text-[#111111] antialiased overflow-x-hidden selection:bg-black selection:text-white;
   }

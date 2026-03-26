@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-36 sm:pt-44 md:pt-48 pb-20 md:pb-32 px-4 sm:px-6 overflow-hidden flex flex-col items-center">
+    <section className="relative pt-28 sm:pt-32 md:pt-36 pb-20 md:pb-32 px-4 sm:px-6 overflow-hidden flex flex-col items-center">
       <div className="bg-hero-glow"></div>
       
-      <div className="max-w-7xl mx-auto w-full flex flex-col items-center text-center mt-4 md:mt-8">
+      <div className="max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         <motion.div 
           initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
           className="inline-flex gap-1.5 sm:gap-2 items-center px-3 sm:px-4 py-1.5 rounded-full border border-black/5 bg-black/[0.02] text-xs sm:text-sm font-medium text-[#727272] mb-8 md:mb-10"

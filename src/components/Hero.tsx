@@ -1,10 +1,11 @@
-import { ArrowRight, ArrowUpRight, ArrowDownLeft, ArrowLeftRight, CreditCard, Send, QrCode, TrendingUp, MoreHorizontal } from 'lucide-react';
+import { ArrowRight, Wifi, Lock, Snowflake, Eye, ShoppingBag, Coffee, Fuel, Music } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const assets = [
-  { symbol: 'BTC', name: 'Bitcoin', amount: '0.4821', value: '$8,240.50', change: '+3.2%', color: '#F7931A' },
-  { symbol: 'ETH', name: 'Ethereum', amount: '2.156', value: '$3,420.00', change: '+1.8%', color: '#627EEA' },
-  { symbol: 'SOL', name: 'Solana', amount: '12.5', value: '$789.50', change: '+5.4%', color: '#9945FF' },
+const transactions = [
+  { name: 'Amazon', icon: ShoppingBag, amount: '-$42.50', time: '2m ago', color: '#FF9900' },
+  { name: 'Starbucks', icon: Coffee, amount: '-$6.80', time: '1h ago', color: '#00704A' },
+  { name: 'Shell Gas', icon: Fuel, amount: '-$55.20', time: '3h ago', color: '#FFD500' },
+  { name: 'Spotify', icon: Music, amount: '-$9.99', time: 'Yesterday', color: '#1DB954' },
 ];
 
 export const Hero = () => {
@@ -56,92 +57,111 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 sm:mt-20 md:mt-28 w-full max-w-3xl mx-auto relative flex justify-center"
         >
-          <div className="w-[280px] sm:w-[310px] md:w-[340px] h-[580px] sm:h-[640px] md:h-[700px] border-[6px] sm:border-[8px] border-[#1A1A1A] rounded-[44px] sm:rounded-[52px] md:rounded-[56px] bg-[#0A0A0A] overflow-hidden relative shadow-[0_20px_80px_rgba(0,0,0,0.25)] sm:shadow-[0_40px_120px_rgba(0,0,0,0.3)]">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] sm:w-[110px] md:w-[120px] h-[26px] sm:h-[28px] md:h-[30px] bg-[#0A0A0A] rounded-b-2xl sm:rounded-b-3xl z-20"></div>
+          <div className="w-[280px] sm:w-[310px] md:w-[340px] h-[580px] sm:h-[640px] md:h-[700px] border-[6px] sm:border-[8px] border-[#E4E4E7] rounded-[44px] sm:rounded-[52px] md:rounded-[56px] bg-white overflow-hidden relative shadow-[0_20px_80px_rgba(0,0,0,0.08)] sm:shadow-[0_40px_120px_rgba(0,0,0,0.12)]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] sm:w-[110px] md:w-[120px] h-[26px] sm:h-[28px] md:h-[30px] bg-[#F7F7F8] rounded-b-2xl sm:rounded-b-3xl z-20"></div>
             
-            <div className="p-4 sm:p-5 md:p-6 pt-10 sm:pt-12 md:pt-14 flex flex-col h-full">
+            <div className="p-4 sm:p-5 md:p-6 pt-10 sm:pt-12 md:pt-14 flex flex-col h-full bg-[#F7F7F8]">
               {/* Status bar */}
-              <div className="flex justify-between items-center mb-4 sm:mb-5 px-1">
-                <span className="text-white/40 text-[10px] font-medium">9:41</span>
+              <div className="flex justify-between items-center mb-3 sm:mb-4 px-1">
+                <span className="text-black/40 text-[10px] font-semibold">9:41</span>
                 <div className="flex gap-1 items-center">
-                  <div className="w-3.5 h-2 border border-white/40 rounded-sm relative">
-                    <div className="absolute inset-[1.5px] right-[2px] bg-green-400 rounded-[1px]"></div>
+                  <div className="w-3.5 h-2 border border-black/30 rounded-sm relative">
+                    <div className="absolute inset-[1.5px] right-[2px] bg-black/70 rounded-[1px]"></div>
                   </div>
                 </div>
               </div>
 
               {/* Header */}
-              <div className="flex justify-between items-center mb-5 sm:mb-6">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/20 to-white/5 border border-white/10 flex items-center justify-center">
-                  <QrCode size={14} className="text-white/60" />
-                </div>
-                <span className="text-white/90 text-sm font-semibold tracking-tight">Tranzo</span>
-                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                  <MoreHorizontal size={14} className="text-white/60" />
+              <div className="flex justify-between items-center mb-4 sm:mb-5">
+                <span className="text-black text-sm sm:text-base font-bold tracking-tight">My Card</span>
+                <div className="w-7 h-7 rounded-full bg-white border border-black/[0.08] shadow-sm flex items-center justify-center">
+                  <Lock size={12} className="text-black/40" />
                 </div>
               </div>
 
-              {/* Balance */}
-              <div className="text-center mb-5 sm:mb-6">
-                <div className="text-white/40 text-[11px] sm:text-xs font-medium mb-1.5 uppercase tracking-wider">Total Balance</div>
-                <div className="text-white text-[28px] sm:text-[32px] md:text-[36px] font-bold tracking-tighter leading-none">$12,450.00</div>
-                <div className="flex items-center justify-center gap-1 mt-1.5">
-                  <TrendingUp size={11} className="text-emerald-400" />
-                  <span className="text-emerald-400 text-[11px] font-semibold">+2.4%</span>
-                  <span className="text-white/30 text-[11px]">today</span>
+              {/* Credit Card */}
+              <div className="w-full aspect-[1.7/1] rounded-2xl sm:rounded-[20px] bg-gradient-to-br from-[#1A1A1A] to-[#2D2D2D] p-4 sm:p-5 flex flex-col justify-between relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.15)] mb-4 sm:mb-5">
+                <div className="absolute top-0 right-0 w-[55%] h-[55%] bg-gradient-to-bl from-white/[0.07] to-transparent rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-[35%] h-[40%] bg-gradient-to-tr from-white/[0.04] to-transparent rounded-tr-full"></div>
+                
+                <div className="flex justify-between items-start relative z-10">
+                  <div>
+                    <div className="text-white/80 text-[10px] sm:text-xs font-bold tracking-tight">Tranzo</div>
+                    <div className="text-white/25 text-[8px] sm:text-[9px] font-medium mt-0.5">Platinum</div>
+                  </div>
+                  <Wifi size={14} className="text-white/25 rotate-90 sm:w-4 sm:h-4" />
                 </div>
-              </div>
 
-              {/* Action buttons */}
-              <div className="grid grid-cols-4 gap-1.5 sm:gap-2 mb-5 sm:mb-6">
-                {[
-                  { icon: ArrowUpRight, label: 'Send' },
-                  { icon: ArrowDownLeft, label: 'Receive' },
-                  { icon: ArrowLeftRight, label: 'Swap' },
-                  { icon: CreditCard, label: 'Card' },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex flex-col items-center gap-1.5">
-                    <div className="w-10 sm:w-11 md:w-12 h-10 sm:h-11 md:h-12 rounded-2xl bg-white/[0.08] border border-white/[0.06] flex items-center justify-center">
-                      <Icon size={16} className="text-white/80" />
+                <div className="relative z-10">
+                  <div className="w-7 sm:w-8 h-5 sm:h-6 rounded bg-gradient-to-br from-amber-300/80 to-amber-500/60 border border-amber-400/30 mb-2.5 sm:mb-3"></div>
+                  <div className="text-white/90 font-bold tracking-[0.15em] text-[11px] sm:text-xs mb-2.5 sm:mb-3">5546 •••• •••• ••••</div>
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <div className="text-white/25 text-[7px] sm:text-[8px] uppercase tracking-wider">Valid Thru</div>
+                      <div className="text-white/60 text-[9px] sm:text-[10px] font-semibold">02/28</div>
                     </div>
-                    <span className="text-[9px] sm:text-[10px] text-white/40 font-medium">{label}</span>
+                    <div className="text-white/40 text-[10px] sm:text-xs font-bold tracking-wider">VISA</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card actions */}
+              <div className="flex gap-2 mb-4 sm:mb-5">
+                {[
+                  { icon: Snowflake, label: 'Freeze' },
+                  { icon: Eye, label: 'Details' },
+                ].map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex-1 flex items-center justify-center gap-1.5 py-2 sm:py-2.5 rounded-xl bg-white border border-black/[0.06] shadow-sm">
+                    <Icon size={13} className="text-black/50" />
+                    <span className="text-[10px] sm:text-[11px] text-black/60 font-semibold">{label}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Assets */}
-              <div className="flex-1 bg-white/[0.04] border border-white/[0.06] rounded-2xl sm:rounded-3xl p-3 sm:p-4">
-                <div className="flex justify-between items-center mb-3 sm:mb-4">
-                  <span className="text-white/50 text-[11px] sm:text-xs font-semibold uppercase tracking-wider">Assets</span>
-                  <span className="text-white/30 text-[10px] sm:text-[11px]">See all</span>
+              {/* Spending */}
+              <div className="bg-white rounded-xl sm:rounded-2xl border border-black/[0.06] p-3 sm:p-3.5 shadow-sm mb-3 sm:mb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-black/35 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider">This Month</span>
+                  <span className="text-black text-xs sm:text-sm font-bold">$1,240.80</span>
+                </div>
+                <div className="w-full h-1.5 rounded-full bg-black/[0.04] overflow-hidden">
+                  <div className="h-full w-[62%] rounded-full bg-black"></div>
+                </div>
+                <div className="flex justify-between mt-1.5">
+                  <span className="text-black/25 text-[9px] sm:text-[10px]">62% of $2,000 limit</span>
+                </div>
+              </div>
+
+              {/* Recent transactions */}
+              <div className="flex-1 bg-white rounded-xl sm:rounded-2xl border border-black/[0.06] p-3 sm:p-3.5 shadow-sm">
+                <div className="flex justify-between items-center mb-2.5 sm:mb-3">
+                  <span className="text-black/35 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider">Recent</span>
+                  <span className="text-black/20 text-[9px] sm:text-[10px]">See all</span>
                 </div>
                 <div className="flex flex-col gap-2.5 sm:gap-3">
-                  {assets.map((asset) => (
-                    <div key={asset.symbol} className="flex items-center gap-2.5 sm:gap-3">
+                  {transactions.map((tx) => (
+                    <div key={tx.name} className="flex items-center gap-2.5">
                       <div
-                        className="w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center shrink-0 text-white font-bold text-[10px] sm:text-[11px]"
-                        style={{ backgroundColor: asset.color + '20', border: `1px solid ${asset.color}30` }}
+                        className="w-7 sm:w-8 h-7 sm:h-8 rounded-lg flex items-center justify-center shrink-0"
+                        style={{ backgroundColor: tx.color + '12' }}
                       >
-                        <span style={{ color: asset.color }}>{asset.symbol.charAt(0)}</span>
+                        <tx.icon size={13} style={{ color: tx.color }} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex justify-between items-center">
-                          <span className="text-white/90 text-xs sm:text-[13px] font-semibold">{asset.symbol}</span>
-                          <span className="text-white/90 text-xs sm:text-[13px] font-semibold">{asset.value}</span>
+                          <span className="text-black text-[11px] sm:text-xs font-semibold">{tx.name}</span>
+                          <span className="text-black text-[11px] sm:text-xs font-semibold">{tx.amount}</span>
                         </div>
-                        <div className="flex justify-between items-center mt-0.5">
-                          <span className="text-white/30 text-[10px] sm:text-[11px]">{asset.amount} {asset.symbol}</span>
-                          <span className="text-emerald-400 text-[10px] sm:text-[11px] font-medium">{asset.change}</span>
-                        </div>
+                        <span className="text-black/25 text-[9px] sm:text-[10px]">{tx.time}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Bottom nav */}
+              {/* Bottom bar */}
               <div className="mt-3 sm:mt-4 flex justify-center">
-                <div className="w-28 sm:w-32 h-1 rounded-full bg-white/20"></div>
+                <div className="w-28 sm:w-32 h-1 rounded-full bg-black/10"></div>
               </div>
             </div>
           </div>
